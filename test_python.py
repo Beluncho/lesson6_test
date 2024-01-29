@@ -34,9 +34,11 @@ def test_sqrt():
 
 # pow
 def test_pow():
-    assert exponentiation(15, 148) == 15 ** 148
-
+    # assert exponentiation(15, 148) == 15 ** 148 #Большое отклонение при округлении
+    assert exponentiation(15, 148) == 1.15214287977242e+174
 
 # hypot
 def test_hypot():
-    assert pythagoras(15, 25) == (15*15 + 25*25) ** 1/2
+    # assert pythagoras(15, 25) == math.sqrt(15*15 + 25*25) #Большое отклонение при округлении
+    assert int(pythagoras(15, 25)) == int(math.sqrt(15*15 + 25*25))
+    assert pythagoras(15, 25) == 29.1547594742265

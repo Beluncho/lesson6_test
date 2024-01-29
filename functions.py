@@ -106,3 +106,6 @@ def pythagoras(leg1, leg2):
 
     return hypotenuse
     pass
+
+
+pythagoras(15, 25)
